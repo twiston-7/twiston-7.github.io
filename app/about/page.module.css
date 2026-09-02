@@ -1,0 +1,279 @@
+.about {
+  position: relative;
+  z-index: 1;
+  max-width: 68.75rem;
+  margin: 2.5rem auto 5rem;
+  padding: 0 1rem;
+}
+
+.srOnly {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.aboutHero {
+  text-align: center;
+}
+
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background: var(--surface-color);
+  border: 0.125rem solid var(--accent-bg-color);
+  box-shadow: 0 0.125rem 0.875rem var(--shadow-color);
+}
+
+.aboutHero h1 {
+  font-weight: 600;
+  letter-spacing: 0.03125rem;
+  font-size: clamp(1.75rem, 1.25rem + 1.8vw, 2.25rem);
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  color: var(--colorful);
+  font-weight: 520;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 100vmax;
+  background: var(--accent-bg-color);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  border: 0.0625rem solid color-mix(in oklab, var(--text-color) 12%, transparent);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.links a {
+  font-size: 1.35rem;
+  color: var(--colorful);
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--contrasting-colorful);
+}
+
+.sectionBridge {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1.25rem;
+}
+
+.scrollIndicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--contrasting-colorful);
+  text-decoration: none;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  border: 0.0625rem solid color-mix(in oklab, var(--contrasting-colorful) 65%, transparent);
+  transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  animation: floatDown 1.6s ease-in-out infinite;
+  background: color-mix(in oklab, var(--accent-bg-color) 65%, transparent);
+}
+
+.scrollIndicator:hover {
+  color: var(--colorful);
+  border-color: color-mix(in oklab, var(--colorful) 65%, transparent);
+}
+
+.scrollIndicatorIcon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.prose {
+  max-width: 50rem;
+  margin: 0 auto 2rem;
+  line-height: 1.75;
+  font-size: 1.02rem;
+  padding: 0 0.25rem;
+}
+
+.prose h2 {
+  font-size: clamp(1.125rem, 1.05rem + 0.6vw, 1.35rem);
+  margin-bottom: 0.6rem;
+  font-weight: 560;
+  position: relative;
+}
+
+.prose h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 3.75rem;
+  height: 0.125rem;
+  background: linear-gradient(90deg, var(--colorful), transparent);
+}
+
+.summaryContent:not(.expanded) p {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: pre-line;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(180deg, #000 75%, transparent);
+}
+
+
+.expanded p {
+  line-clamp: unset;
+  -webkit-line-clamp: unset;
+  mask-image: none;
+}
+
+.summaryQuick {
+  margin: 0 0 0.5rem;
+}
+
+.summaryToggle {
+  margin-top: 0.35rem;
+  background: transparent;
+  color: var(--colorful);
+  border: 0.0625rem solid color-mix(in oklab, var(--colorful) 65%, transparent);
+  border-radius: 100vmax;
+  padding: 0.35rem 0.6rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.summaryToggle:hover {
+  color: var(--contrasting-colorful);
+  border-color: color-mix(in oklab, var(--contrasting-colorful) 65%, transparent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: color-mix(in oklab, var(--accent-bg-color) 85%, transparent);
+  border: 0.0625rem solid color-mix(in oklab, var(--text-color) 10%, transparent);
+  backdrop-filter: blur(0.25rem);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  font-weight: 560;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chips li {
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.625rem;
+  background: var(--accent-bg-color);
+  border: 0.0625rem solid color-mix(in oklab, var(--text-color) 12%, transparent);
+  font-size: 0.95rem;
+}
+
+.bullets {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.bulletsTight {
+  gap: 0.25rem;
+}
+
+.bullets li {
+  list-style: disc;
+}
+
+@keyframes floatDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0.35rem);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.revealVisible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollIndicator {
+    animation: none;
+  }
+
+  .reveal {
+    transition: none;
+  }
+}
+
+@media (max-width: 61.25rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 43.75rem) {
+  .about {
+    margin: 2.5rem auto 4.5rem;
+  }
+
+  .links a {
+    font-size: 1.25rem;
+  }
+}

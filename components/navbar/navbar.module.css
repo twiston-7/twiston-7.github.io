@@ -1,0 +1,224 @@
+.siteHeader {
+  position: sticky;
+  top: 1rem;
+  z-index: 20;
+}
+
+.siteNav {
+  margin: 0.3rem auto 1rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.25rem;
+  background: var(--accent-bg-color);
+  box-shadow: 0 0.25rem 0.75rem var(--shadow-color);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 4rem;
+  max-width: 75rem;
+}
+
+.navLink {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navLinkActive {
+  color: var(--colorful);
+}
+
+.navActions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.backgroundSwitcher {
+  position: relative;
+}
+
+.backgroundToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid color-mix(in oklab, var(--text-color) 14%, transparent);
+  border-radius: 999rem;
+  background: var(--surface-color);
+  color: var(--text-color);
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0 0.1rem 0.25rem var(--shadow-color);
+}
+
+.backgroundToggleLabel,
+.backgroundToggleValue {
+  white-space: nowrap;
+}
+
+.backgroundToggleLabel {
+  font-size: 0.88rem;
+  opacity: 0.75;
+}
+
+.backgroundToggleValue {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.backgroundToggleCaret {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.backgroundMenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 14rem;
+  padding: 0.45rem;
+  border-radius: 1rem;
+  background: var(--surface-color);
+  box-shadow: 0 0.35rem 0.95rem var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 25;
+}
+
+.backgroundMenuItem {
+  width: 100%;
+  border: 0;
+  border-radius: 0.8rem;
+  padding: 0.7rem 0.8rem;
+  background: transparent;
+  color: var(--text-color);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font: inherit;
+}
+
+.backgroundMenuItemActive {
+  background: color-mix(in oklab, var(--colorful) 12%, var(--surface-color));
+}
+
+.backgroundMenuItemLabel {
+  font-weight: 600;
+}
+
+.backgroundMenuItemDescription {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+.themeSelector {
+  display: flex;
+  align-items: center;
+}
+
+.themeCheckbox {
+  display: none;
+}
+
+.themeSelectorLabel {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.themeIcon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 1.5rem;
+  height: 0.15rem;
+  margin: 0.3rem 0;
+  background: var(--text-color);
+  transition: 0.3s;
+}
+
+.hamburgerActive .bar:nth-child(1) {
+  transform: rotate(45deg) translate(0.2rem, 0.42rem);
+}
+
+.hamburgerActive .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerActive .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(0.2rem, -0.4rem);
+}
+
+@media (max-width: 48rem) {
+  .siteHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0.5rem 0 0 auto;
+    z-index: 21;
+  }
+
+  .siteNav {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    margin: 0;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    transform: translateX(120%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navActions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .siteNavOpen {
+    transform: translateX(0);
+  }
+
+  .themeSelector {
+    margin: 0;
+  }
+}
+

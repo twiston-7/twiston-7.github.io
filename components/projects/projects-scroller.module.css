@@ -1,0 +1,209 @@
+.projectsApp {
+  position: relative;
+  z-index: 1;
+  height: calc(100dvh - 5rem);
+}
+
+.projectsApp,
+.projectSlide {
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.projectsScroll {
+  height: calc(100dvh - 5rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+
+.projectsScroll::-webkit-scrollbar,
+.projectSlide::-webkit-scrollbar {
+  display: none;
+}
+
+.projectSlide {
+  box-sizing: border-box;
+  min-height: calc(100dvh - 6rem);
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-bottom: 0.0625rem solid color-mix(in oklab, var(--text-color) 12%, transparent);
+}
+
+.projectSlide:last-child {
+  border-bottom: 0;
+}
+
+.projectMedia {
+  position: relative;
+  height: 65vh;
+  max-height: 65vh;
+  border-radius: 1rem;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--colorful) 30%, var(--surface-color)),
+    color-mix(in oklab, var(--contrasting-colorful) 30%, var(--surface-color))
+  );
+  box-shadow: 0 0.625rem 1.875rem var(--shadow-color);
+  overflow: hidden;
+}
+
+.projectMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projectKicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--text-color) 60%, var(--colorful));
+}
+
+.projectTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--text-color);
+}
+
+.projectSubtitle {
+  font-size: clamp(1rem, 2.1vw, 1.25rem);
+  color: color-mix(in oklab, var(--text-color) 75%, var(--contrasting-colorful));
+}
+
+.projectDesc {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: color-mix(in oklab, var(--text-color) 90%, var(--contrasting-colorful));
+}
+
+.projectTech {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 62.4375rem;
+  background: color-mix(in oklab, var(--surface-color) 80%, var(--bg-color));
+  border: 0.0625rem solid color-mix(in oklab, var(--text-color) 12%, transparent);
+  font-size: 0.85rem;
+}
+
+.projectActions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  appearance: none;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.625rem;
+  padding: 0.7rem 1rem;
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.btnPrimary {
+  background: var(--colorful);
+  color: #fff;
+  border-color: color-mix(in oklab, var(--colorful) 85%, #000);
+}
+
+.btnPrimary:hover {
+  background: color-mix(in oklab, var(--colorful) 88%, #000);
+}
+
+.btnGhost {
+  background: transparent;
+  border-color: color-mix(in oklab, var(--text-color) 18%, transparent);
+}
+
+.btnIsDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.projectsRail {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  z-index: 10;
+}
+
+.segment {
+  border: 0;
+  background: transparent;
+  width: 0.55rem;
+  height: 1.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  opacity: 0.85;
+  background: color-mix(in oklab, var(--text-color) 28%, transparent);
+}
+
+.segment[aria-current="true"] {
+  background: var(--colorful);
+  opacity: 1;
+}
+
+@media (max-width: 56.25rem) {
+  .projectSlide {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .projectMedia {
+    height: clamp(13.75rem, 45vh, 26.25rem);
+    max-height: clamp(13.75rem, 45vh, 26.25rem);
+  }
+}
+
+.projectsScroll.isAnimating {
+  scroll-snap-type: none;
+}
+
+@media (max-width: 37.5rem) {
+  .projectsRail {
+    display: none;
+  }
+
+  .projectSlide {
+    scroll-snap-stop: normal;
+  }
+}
+
