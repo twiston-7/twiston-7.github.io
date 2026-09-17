@@ -22,14 +22,47 @@ export const projects: Project[] = [
     kicker: "Featured",
     subtitle: "A Minecraft mod written in Kotlin",
     description:
-      "A quality of life mod designed for Hypixel Skyblock, including pathfinding, movement and a flexible module loader.",
+      "A quality of life mod designed for Hypixel Skyblock, including A* pathfinding, movement, rotations and a flexible module loader.",
     tech: ["Kotlin", "Java", "Gradle"],
     image: "/assets/cobalt-icon.png",
     repo: "https://github.com/CobaltScripts/Cobalt",
     cta: {
-      label: "Discord server",
-      href: "https://discord.gg/dagzgJrgu9",
+      label: "Website",
+      href: "https://cobalt.quiteboring.dev/",
     },
+  },
+  {
+    id: "gwenly",
+    title: "Gwenly",
+    kicker: "League of Legends Utility",
+    subtitle: "A League of Legends utility",
+    description:
+      "A work-in-progress overlay for League of Legends aiming at improving the player experience without a major performance penalty.",
+    tech: ["C++", "CMake", "ImGui"],
+    image: "/assets/gwenly-icon-temporary.jpg",
+    repo: "https://github.com/twiston-7/gwenly",
+  },
+  {
+    id: "blackjack-utils",
+    title: "Modular Blackjack Statistic",
+    kicker: "Blackjack Statistics",
+    subtitle: "A modular blackjack statistics utility",
+    description:
+      "Calculates the house edge for blackjack, with a modular design allowing for custom game rules to be calculated easily",
+    tech: ["C++", "CMake"],
+    image: "/assets/blackjack-utils-icon.png",
+    repo: "https://github.com/twiston-7/blackjack-utils",
+  },
+  {
+    id: "perfect-basic-strategy",
+    title: "A perfect basic strategy calculator",
+    kicker: "Blackjack Statistics",
+    subtitle: "Calculates optimal blackjack play",
+    description:
+      "Calculates the mathematically optimal decision for every player and dealer hand combination for blackjack",
+    tech: ["Kotlin", "Gradle"],
+    image: "/assets/perfect-basic-strategy-icon.png",
+    repo: "https://github.com/twiston-7/perfect-basic-strategy",
   },
   {
     id: "human-benchmark-solver",
@@ -41,28 +74,6 @@ export const projects: Project[] = [
     tech: ["Node.js", "Puppeteer"],
     image: "/assets/human-benchmark-solver.png",
     repo: "https://github.com/twiston-7/human-benchmark-solver",
-  },
-  {
-    id: "blackjack-utils",
-    title: "Modular Blackjack Statistic",
-    kicker: "Statistics",
-    subtitle: "A modular blackjack statistics utility",
-    description:
-      "Calculates the house edge for blackjack, with a modular design allowing for custom game rules to be calculated easily",
-    tech: ["C++", "CMake"],
-    image: "",
-    repo: "https://github.com/twiston-7/blackjack-utils",
-  },
-  {
-    id: "gwenly",
-    title: "Gwenly",
-    kicker: "League of Legends Utility",
-    subtitle: "A League of Legends utility",
-    description:
-      "A work-in-progress overlay for League of Legends aiming at improving the player experience without a minor performance penalty.",
-    tech: ["C++", "CMake", "ImGui"],
-    image: "",
-    repo: "https://github.com/twiston-7/gwenly",
   },
   {
     id: "twiston-dev",
