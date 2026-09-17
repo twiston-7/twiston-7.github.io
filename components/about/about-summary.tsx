@@ -27,16 +27,10 @@ export default function AboutSummary({ text, classes }: AboutSummaryProps) {
       <div className={classes.summaryQuick} aria-label="Quick summary">
         <ul className={`${classes.bullets} ${classes.bulletsTight}`}>
           <li>
-            <strong>Backend focus:</strong> Fluent at Java & Kotlin, with basic c++ skills.
+            <strong>Languages:</strong> Experienced in Java and Kotlin, beginner level C++
           </li>
           <li>
-            <strong>Learning:</strong> C++
-          </li>
-          <li>
-            <strong>Workflow:</strong> reviews, testing, iterative delivery.
-          </li>
-          <li>
-            <strong>Interest:</strong> security-minded, clear communication.
+            <strong>Interest:</strong> Mathematical/statistical analysis, game development
           </li>
         </ul>
       </div>

@@ -9,12 +9,13 @@ import Reveal from "@components/reveal";
 import styles from "@app/about/page.module.css";
 
 const text =
-  "I'm Nick, an HBO-ICT student studying software development, in my final year.\n" +
-  "Based in the Netherlands, I have a strong backend focus using Java and Kotlin.\n" +
-  "I care about delivering clean, maintainable and stable code instead of focussing purely on optimisation or eye candy.\n" +
-  "I'm currently learning C++ and Vulkan.\n" +
-  "I speak both Dutch and English at a native level, with Dutch being my native language.\n" +
-  "Project highlights and code are on the Projects tab or on my GitHub page.\n"
+  "Hi! My name is Nick. I'm a software developer in my final year of university.\n" +
+  "Based in the Netherlands, with a backend focus using primarily Java and Kotlin.\n" +
+  "I started programming with Scratch when I was 8 years old.\n" +
+  "Currently, I have 5 years of experience with Java and 3 years of experience with Kotlin.\n" +
+  "Whilst I value creativity in solutions, it should always serve a practical purpose.\n" +
+  "I'm currently learning C++ using CMake and ImGui for Windows development.\n" +
+  "I speak both Dutch and English at a native level and am interested in learning German.\n"
 
 export default function AboutPageClient() {
   return (
@@ -29,7 +30,7 @@ export default function AboutPageClient() {
             <FaLocationDot /> Netherlands
           </span>
           <span className={styles.chip}>
-            <FaCode /> Java - Kotlin - Web
+            <FaCode /> Java - Kotlin
           </span>
         </div>
 
@@ -64,28 +65,30 @@ export default function AboutPageClient() {
           <ul className={styles.chips}>
             <li>Java</li>
             <li>Kotlin</li>
-            <li>Git</li>
             <li>JUnit</li>
+            <li>Git</li>
             <li>Scrum</li>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>BML Loop</li>
+            <li>Security-first</li>
           </ul>
         </article>
 
         <article className={styles.card}>
           <h3>Currently learning</h3>
           <ul className={styles.chips}>
-            <li>C# / .NET</li>
-            <li>C / C++ (exploring)</li>
+            <li>C++</li>
+            <li>CMake</li>
+            <li>ImGui</li>
+            <li>Vulkan</li>
+            <li>WinAPI</li>
           </ul>
         </article>
 
         <article className={styles.card}>
           <h3>Values</h3>
           <ul className={styles.bullets}>
-            <li>Simplicity and readability over cleverness</li>
-            <li>Code reviews, testing, and iterative delivery</li>
+            <li>Practical creativity</li>
+            <li>Iterative and incremental development</li>
             <li>Security-minded engineering</li>
             <li>Clear, straightforward communication</li>
           </ul>
