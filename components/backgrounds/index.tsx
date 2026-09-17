@@ -17,6 +17,7 @@ export const BACKGROUND_OPTIONS: BackgroundOption[] = [
     id: "distortion",
     label: "Distortion",
     description: "A Balatro-like animated background.",
+    isApplicable: ({ theme }) => theme === "dark",
     component: WebGLBackground,
   },
   {

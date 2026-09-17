@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 
-export type BackgroundId = "skyline" | "distortion" | "slimeMold" | "minimal";
+export type BackgroundId = "skyline" | "distortion" | "minimal";
 
 export type BackgroundContext = {
   pathname: string;
